@@ -1,0 +1,54 @@
+*{
+ background: #000;
+ color: white;
+}
+.nav{
+    height: 20px;   
+    width: 100%;
+}
+.nav img{
+    height: 40px;
+    margin-left: 90px;
+    margin-top: 5px;
+}
+.main{
+    text-align: center;
+    margin-top: 6%;
+}
+.main :first-child{
+    font-size: 40px;
+    font-weight:700;
+    font-family: 'AR One Sans', sans-serif;
+    
+}
+.main :nth-child(2){
+    font-size: 20px;
+    font-weight: 100;
+    font-family: 'EB Garamond', serif;
+    color: lightgray;
+}
+.serch{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    
+}
+.serch input{
+    height: 45px;
+    width: 30%;
+    margin-right: 20px;
+    border-radius: 25px;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+}
+.butt{
+    height: 46px;
+    width: 7rem;
+    background: red;
+    border: hidden;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'EB Garamond', serif;
+}
