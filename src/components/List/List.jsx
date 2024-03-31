@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from "react";
 import "../List/List.css";
 
-const List = (props) => {
-  const { data, statisticsData } = props;
+const List = ({ snippet, statistics }) => {
   const [dynamicData, setDynamicData] = useState([]);
 
   useEffect(() => {
-    if (data && statisticsData) {
-      // Extract relevant information from data and statisticsData
+    if (snippet && statistics) {
       const newVideoData = {
-        title: data.title,
-        image: data.thumbnails.default.url,
-        views: statisticsData.viewCount,
-        likes: statisticsData.likeCount,
-        comments: statisticsData.commentCount,
-        date: new Date(data.publishedAt).toLocaleDateString(),
+        title: snippet?.title,
+        image: snippet?.thumbnails?.default?.url,
+        views: statistics?.viewCount,
+        likes: statistics?.likeCount,
+        comments: statistics?.commentCount,
+        date: new Date(snippet?.publishedAt).toLocaleDateString(),
         duration: "Estimated Earning", // You may need to calculate this based on your logic
       };
 
@@ -24,7 +22,7 @@ const List = (props) => {
       // Update the state with the new video data
       setDynamicData((prevData) => [...prevData, newVideoData]);
     }
-  }, [data, statisticsData]);
+  }, [snippet, statistics]);
 
   return (
     <div className="list-con">
