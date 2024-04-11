@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
 import Earning from "./components/Earning/Earning";
-import Call from "./components/Call/Call";
+import Call from "./components/Home/Call/Call";
 import Navbar from "./components/Navbar/Navbar";
 import { VideoProvider } from "./components/context/Context";
 
